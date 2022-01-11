@@ -41,9 +41,9 @@ int main() {
 	cin>>m;
 	for(int i=1;i<=m;i++) cin>>k[i];	
 	sort(k+1,k+m+1);
-	//for (int i = 1; i <= m; i++) cout << k[i]<<" "; cout << endl;
-	//inday(m);
-	sinhday(1);
+	for (int i = 1; i <= m; i++) cout << k[i]<<" "; cout << endl;
+//	inday(m);
+//	sinhday(1);
 	cout<<dem;
 }
 

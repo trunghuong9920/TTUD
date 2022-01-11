@@ -18,5 +18,5 @@ int main(){
 			nhap[i][j]= -1;
 		}
 	}
-	cout<<C2(20,30);
+	cout<<C2(2,3);
 }
