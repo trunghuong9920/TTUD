@@ -1,38 +1,33 @@
 #include <iostream>
 using namespace std;
-
 const int MAX = 100;
-int a[MAX], n;
-int temp;
+int a[MAX], n, m,dem;
 
-void print(){
-	for(int i=n ; i>=1; i--){
-		if(a[i] != 0){
-			cout <<a[i]<<"+";
-//			a[i] = 0;
-		}
+void print(int stt){
+	int dem=2;
+	for(int i=1; i<stt; i++){
+		if(dem <stt)
+			cout<<a[i]<<"+";
+		else
+			cout<<a[i]<<" ";
+		dem++;
 	}
 	cout<<endl;
-//	cout<<a[n]<<endl;
+
 }
-
-void sinh(int k, int p){
-
-	if(p >= n){
-		print();
-		temp--;
-		return;
-	}
-	
-	for(int i=k; i>=1; i--){
+void gen(int k,int tong,int stt) {
+	if (tong > n) { return; }
+	if (tong == n) { 
+		cout<<n<<" = ";print(k); 
+	return; }
+	for (int i = stt ; i >= 1; i--) {
 		a[k] = i;
-		sinh(k-i,p+i);
+		gen(k+1,tong+i,i);
 	}
 }
 
-int main(){
-	cout<<"Nhap n = "; cin>>n;
-	temp = n;
-	sinh(n, 0);
-	return 0;
+int main() {
+	cout << "Nhap n = "; cin >> n;
+	gen(1,0,n);
 }
+
