@@ -24,7 +24,7 @@ bool dk1(){
 void inday(int n) {
 		
 	if(dk1()) { dem++; 
-	//for (int i = 1; i <= n; i++)  cout<<k[a[i]]<<" "; cout << endl;
+		for (int i = 1; i <= n; i++)  cout<<k[a[i]]<<" "; cout << endl;
 	}
 }
 void sinhday(int k) {
@@ -41,9 +41,7 @@ int main() {
 	cin>>m;
 	for(int i=1;i<=m;i++) cin>>k[i];	
 	sort(k+1,k+m+1);
-	for (int i = 1; i <= m; i++) cout << k[i]<<" "; cout << endl;
-//	inday(m);
-//	sinhday(1);
+	sinhday(1);
 	cout<<dem;
 }
 
